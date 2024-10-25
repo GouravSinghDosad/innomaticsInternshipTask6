@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading"><h1>Todo List</h1></div>
+        <div class="container-body">
+            <div class="input-group">
+                <input type="text" id="task-input" placeholder="Add a new task">
+                <input type="date" id="due-date-input" placeholder="Due Date"> <!-- New -->
+                <input type="text" id="category-input" placeholder="Category"> <!-- New -->
+                <select id="priority-input"> <!-- New -->
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <button id="add-task-btn">Add Task</button>
+            </div>
+            <div class="filters">
+                <button class="filter-btn" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+            </div>
+            <ul id="task-list"></ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

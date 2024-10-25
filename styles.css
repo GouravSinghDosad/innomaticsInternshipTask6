@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #d2fbff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+    width: 300px;
+    height: 50px;
+    margin-bottom: 50px;
+    margin: 0 auto 50px auto;
+    display: flex;
+    justify-content: center;
+    border: none;
+    align-items: center;
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 5px;
+    font-size: 22px;
+    flex-wrap: wrap; /* this line makes the input group responsive */
+}
+
+#task-input, #due-date-input, #category-input, #priority-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 100px; /* make sure inputs don’t shrink too much */
+    margin-bottom: 10px; 
+}
+
+#add-task-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    min-width: 120px;
+    margin-bottom: 10px; /* by this input buttons gets spacing on small screens */
+}
+
+#add-task-btn:hover {
+    background-color: #0056b3;
+}
+
+.filters {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap; /* Make filters responsive */
+}
+
+.filter-btn {
+    padding: 10px;
+    border: none;
+    background-color: #e9ecef;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 3px;
+    color: rgb(38, 38, 38);
+}
+
+.filter-btn:hover {
+    background-color: #ced4da;
+    color: black;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    flex-wrap: wrap; /* Make task items responsive */
+}
+
+.task-item span {
+    flex: 1;
+    text-decoration: none;
+}
+
+.task-item.completed span {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.task-item button {
+    margin-left: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.complete-btn:hover, .delete-btn:hover, .edit-btn:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 1200px) {
+    .input-group {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 992px) {
+    .input-group {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .input-group, .filters, .task-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .filter-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 16px;
+    }
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #add-task-btn, .filter-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .task-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .complete-btn, .delete-btn, .edit-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
